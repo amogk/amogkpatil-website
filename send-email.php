@@ -19,6 +19,14 @@
             <title>About - Amogk Patil</title>
             <link rel="stylesheet" href="style.css">
             <script src="nav.js"></script>
+            <script type="importmap">
+                {
+                    "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@<version>/examples/jsm/"
+                    }
+                }
+            </script>
             <script src="contactreturn_3js.js" type="module"></script> 
         </head>
         <body>
