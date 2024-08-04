@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    --dark: #2a2d34;
+    --light: #f2e3bc;
+    --accent: #cb98e9;
+    --blue: #07beb8;
+    --teal: #218380;
+}
+
+* {
+    font-family: Montserrat;
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    width: .25vw;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, div{
+    text-decoration: none;
+    color: var(--light);
+}
+
+p {
+    font-size: 1.25em;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5em;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 3px solid var(--light);
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--teal);
+    color: var(--light);
+    padding: .25%;
+    width: 100%;
+}
+
+footer h3 {
+    font-weight: 400;
+    text-align: center;
+}
+
+#c {
+    width: 50vw;
+    height: 50vw;
+}
+
+#title {
+    margin: 0 0 0 1.25%;
+    padding: 0;
+    font-weight: 500;
+    transition: background-color 200ms ease;
+}
+
+#menu {
+    height: 100%;
+    margin-right: .75%;
+    transition: background-color 200ms ease;
+}
+
+#menu:hover {
+    background-color: var(--dark);
+    cursor: pointer;
+}
+
+.items {
+    pointer-events: none;
+    z-index: 99;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0008;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    opacity: 0%;
+    transition: opacity 500ms;
+}
+
+.navbar {
+    height: 70vh;
+    align-content: center;
+    list-style-type: none;
+    width: 100%;
+    margin-top: -5%;
+    padding: 0;
+    transition: opacity 500ms;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+#special{
+    display: flex;
+    align-items: center;
+    height: 2em;
+    font-weight: 500;
+    font-size: 8vh;
+    padding: 1vh 5vh;
+    text-transform: uppercase;
+    transition: 200ms ease;
+}
+
+.navbar:has(#special:hover) #special:not(#special:hover){
+    opacity: 0.2;
+    transition: 200ms ease;
+}
+
+#special span {
+    padding: 0 1%;
+    transition: 200ms ease;
+}
+
+#special span:hover {
+    font-size: 20vh;
+    transition: 200ms ease;
+}
+
+.navlink {
+    display: none;
+    transition: 200ms ease;
+}
+
+.content {
+    padding: 0 1.25%;
+    display: flex;
+    flex-direction: column;
+}
+
+#title_stuff {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+#greeting {
+    width: 50%;
+}
+
+#pronunciation {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2.5%;;
+    color: var(--blue);
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: .2rem;;
+}
+
+#mini-desc {
+    line-height: 200%;
+    margin: 0;
+    padding: 2.5% 0 5% 0;
+}
+
+.footer {
+    background-color: var(--teal);  
+    padding: 1% 2%;
+}
+
+#content-heading {
+    padding: 0 1.25%;
+    font-size: 250%;
+}
+
+#content-subheading {
+    padding: 0 1.25%;
+    font-weight: 600;
+}
+
+.input-form {
+    padding: 0 1.25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-name {
+    flex-grow: 1;
+    font-size: 2vw;
+    padding: 1.1%;
+    margin: 0 1.25%;
+    border: none;
+    color: var(--light);
+    background-color: #00000000;
+    border-bottom: 3px solid var(--blue);
+}
+
+.input-name:invalid {
+    border-color: red;
+}
+
+#input-message {
+    flex-grow: 8;
+    font-size: 1.5vw;
+    overflow-wrap: break-word;
+    padding: 1.25%;
+    margin: 0 1.25%; 
+    resize: none; 
+    height: 30vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border: none;
+    color: var(--light);
+    background-color: #00000000;
+    border-bottom: 3px solid var(--blue);
+} 
+ 
+#input-message:invalid {
+    border-color: red;
+}
+
+#send-message { 
+    flex-grow: 1; 
+    text-align: left; 
+    padding: 1.25%; 
+    margin: 1.25%; 
+    font-size: 2vw; 
+    border: none;
+    border-radius: 15px;
+    background-color: var(--teal);
+    color: var(--light);
+    transition: 250ms ease;
+}
+
+#send-message:hover {
+    font-weight: 600;
+    background-color: #276765;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+#blob {
+    background-color: white;
+    height: 30vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--teal), var(--accent));
+    animation: rotate 10s infinite linear;
+    opacity: 0.8;
+    z-index: -2;
+}
+
+#blur {
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    backdrop-filter: blur(12vmax);
+}
+
+#after-contact {
+    text-align: center;
+    padding: 1.5% 1.5% 0 1.5%;
+}
+
+#response {
+    margin-bottom: 0;
+}
+
+#return-home {
+    font-weight: 400;
+    text-decoration: underline;
+    transition: 250ms ease;
+}
+
+#return-home:hover {
+    font-weight: 600;
+}
+
+#contact_c {
+    padding: 0;
+    margin: 0;
+    width: 75vw;
+}
+
+#contact_canvasholder {
+    margin: 0;
+    padding: 0;
+}
+
+/*Projects styling here*/
+
+#grid-container {
+    display: grid;
+    padding: 0 2.5%;
+    align-content: center;
+}
+
+.item_style_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2.5%;
+    padding: 1%;
+    margin: 1% 0;
+    border-radius: 15px;
+    border: 3px solid var(--blue);
+}
+
+.item_style_1 img {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 15px;
+}
+
+.item_style_1 div {
+    align-content: center;
+}
+
+.item_style_1 div p {
+    align-content: center;
+    line-height: 175%;
+    color: var(--accent);
+}
+
+.item_style_1 div h1{
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    border-bottom: 3px solid var(--light);
+}
+
+#projects_title {
+    font-size: 2.5rem;
+    padding: 2.5%;
+    text-align: center;
+    text-justify: center;
+    font-weight: 500;
+    letter-spacing: .5rem;
+    border-bottom: 3px solid var(--light);
+}
+
+#projects_desc {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+#secondary_desc {
+    font-weight: 500;
+}
+
+#generic_desc {
+    font-weight: 300;
+    border-bottom: 2px solid var(--light);
+}
+
+.generic_grid {
+    display: grid;
+    gap: 0%;
+    grid-template-columns: auto auto auto;
+    padding-bottom: 5%;
+    align-content: center;
+    justify-content: center;
+}
+
+.generic_grid img {
+    width: 32.5vw;
+    height: 32.5vw;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+#b_bed {
+    grid-area: span 1 / span 2;
+    width: auto;
+}
+
+/*About page styling here*/
+
+#about-flex {
+    height: 87.5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#photo-grid {
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 15vw 15vw;
+    grid-template-rows: 15vw 15vw 15vw;
+    align-content: center;
+}
+
+#photo-grid-item:first-child {
+    width: 15vw;
+    height: 30vw;
+    grid-area: 1 / 1 / span 1 / span 2;
+    object-fit: cover;
+}
+
+#photo-grid-item:nth-child(2) {
+    width: 15vw;
+    height: 30vw;
+    grid-area: 1 / 2 / span 1 / span 2;
+    object-fit: cover;
+}
+
+#photo-grid-item:nth-child(3) {
+    width: 30vw;
+    height: 15vw;
+    grid-area: 3 / 1 / span 1 / span 2;
+    object-fit: cover;
+    object-position: 0 80%;
+}
+
+#about-text {
+    padding: 0 5%;
+    align-content: center;
+    object-fit: cover;
+    line-height: 2.25rem;
+}
+
+#about-text h1 {
+    font-weight: 300; 
+    text-transform: uppercase;
+    letter-spacing: 0.5vw;
+    border-bottom: 2px solid var(--light);
+}
