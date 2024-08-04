@@ -19,6 +19,7 @@
             <title>About - Amogk Patil</title>
             <link rel="stylesheet" href="style.css">
             <script src="nav.js"></script>
+            <script src="contactreturn_3js.js" type="module"></script> 
         </head>
         <body>
             <header>
@@ -28,8 +29,7 @@
                 <h1 id="response">Thanks for sending me a message! I will respond as soon as I can.</h1>
                 <a href="index.html"><h1 id="return-home">Return home?</h1></a>
                 <div id="contact_canvasholder">
-                    <canvas id="contact_c"></canvas>
-                    <script src="contactreturn_3js.js" type="module"></script>    
+                    <canvas id="contact_c"></canvas>   
                 </div>
             </div>
         </body> 
