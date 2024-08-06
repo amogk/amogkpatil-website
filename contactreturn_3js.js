@@ -14,7 +14,7 @@ function main() {
 	const far = 5;
 	const camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
 	camera.position.z = 2;
-    camera.position.set(0, 1, 1.5);
+    camera.position.set(0, 1.2, 1.25);
 
 	const scene = new THREE.Scene();
 
@@ -33,7 +33,7 @@ function main() {
 	let mail;
 	gltfLoader.load(model, (gltf) => {
 	  const root = gltf.scene;
-	  root.position.set(0, 0.4, 0);
+	  root.position.set(0, 0.5, 0);
       root.scale.set(0.1, 0.1, 0.1);
       root.rotation.set(0, 0, 0);
 	  mail = gltf;

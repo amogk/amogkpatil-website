@@ -35,6 +35,9 @@ body {
     background-color: #000;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6, p, span, a, div{
@@ -66,7 +69,7 @@ footer {
     background-color: var(--teal);
     color: var(--light);
     padding: .25%;
-    width: 100%;
+    width: 99.5%;
 }
 
 footer h3 {
@@ -119,7 +122,7 @@ footer h3 {
     align-content: center;
     list-style-type: none;
     width: 100%;
-    margin-top: -5%;
+    margin-top: 5%;
     padding: 0;
     transition: opacity 500ms;
 }
@@ -133,10 +136,16 @@ footer h3 {
     align-items: center;
     height: 2em;
     font-weight: 500;
-    font-size: 8vh;
+    font-size: 5em;
     padding: 1vh 5vh;
     text-transform: uppercase;
     transition: 200ms ease;
+}
+
+@media only screen and (max-width: 800px) {
+    #special{
+        font-size: 2.5em;
+    }
 }
 
 .navbar:has(#special:hover) #special:not(#special:hover){
@@ -144,13 +153,16 @@ footer h3 {
     transition: 200ms ease;
 }
 
-#special span {
-    padding: 0 1%;
-    transition: 200ms ease;
+/* Disable font shift for mobile devices */
+@media only screen and (min-width: 800px) {
+    #special span:hover {
+        font-size: 20vh;
+        transition: 200ms ease;
+    }
 }
 
-#special span:hover {
-    font-size: 20vh;
+#special span {
+    padding: 0 1%;
     transition: 200ms ease;
 }
 
@@ -179,11 +191,18 @@ footer h3 {
 #pronunciation {
     padding: 0;
     margin: 0;
-    margin-bottom: 2.5%;;
+    margin-bottom: 2.5%;
     color: var(--blue);
     font-weight: 300;
     text-align: center;
-    letter-spacing: .2rem;;
+    letter-spacing: .2rem;
+}
+
+/* Pronunciation section should be same size as the paragraph for mobile devices */
+@media only screen and (max-width: 800px) {
+    #pronunciation {
+        font-size: 1.25em;
+    }
 }
 
 #mini-desc {
@@ -192,18 +211,13 @@ footer h3 {
     padding: 2.5% 0 5% 0;
 }
 
-.footer {
-    background-color: var(--teal);  
-    padding: 1% 2%;
-}
-
 #content-heading {
-    padding: 0 1.25%;
+    padding: 0 1%;
     font-size: 250%;
 }
 
 #content-subheading {
-    padding: 0 1.25%;
+    padding: 0 1.5%;
     font-weight: 600;
 }
 
@@ -325,12 +339,40 @@ footer h3 {
 #contact_c {
     padding: 0;
     margin: 0;
-    width: 75vw;
+    width: 50vw;
 }
 
 #contact_canvasholder {
     margin: 0;
+    margin-top: auto;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    border: 3px solid var(--light);
+}
+
+#links-holder {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact-link {
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+}
+
+#contact-link img {
+    width: 75%;
+    margin: 0;
+    padding: 0;
+    transition: 100ms ease;
+}
+
+@media only screen and (min-width: 800px) {
+    #contact-link img:hover {
+        width: 70%;
+    }
 }
 
 /*Projects styling here*/
@@ -338,19 +380,25 @@ footer h3 {
 #grid-container {
     display: grid;
     padding: 0 2.5%;
+    align-self: center;
     align-content: center;
+    justify-content: center;
+    width: 90vw;
 }
 
 .item_style_1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     gap: 2.5%;
     padding: 1%;
-    margin: 1% 0;
+    margin: 1% auto;
     border-radius: 15px;
     border: 3px solid var(--blue);
+    width: 90%;
 }
+
 
 .item_style_1 img {
     width: 25vw;
@@ -360,7 +408,32 @@ footer h3 {
 
 .item_style_1 div {
     align-content: center;
+    width: 60vw;
 }
+
+
+@media only screen and (max-width: 800px) {
+    .item_style_1 {
+        flex-direction: column;
+    }
+
+    .item_style_1 img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+    
+    .item_style_1 div {
+        align-content: center;
+        width: 100%;
+    }
+
+    .item_style_1 div h1{
+        font-size: 2em;
+        word-wrap: break-word;
+    }
+}
+
 
 .item_style_1 div p {
     align-content: center;
@@ -397,7 +470,12 @@ footer h3 {
 
 #generic_desc {
     font-weight: 300;
+    margin: 0;
     border-bottom: 2px solid var(--light);
+}
+
+#generic_seconday_desc {
+    font-weight: 300;
 }
 
 .generic_grid {
@@ -425,7 +503,6 @@ footer h3 {
 /*About page styling here*/
 
 #about-flex {
-    height: 87.5vh;
     width: 100vw;
     display: flex;
     justify-content: space-around;
@@ -438,6 +515,7 @@ footer h3 {
     grid-template-columns: 15vw 15vw;
     grid-template-rows: 15vw 15vw 15vw;
     align-content: center;
+    padding: 2.5%;
 }
 
 #photo-grid-item:first-child {

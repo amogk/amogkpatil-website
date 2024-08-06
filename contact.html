@@ -7,6 +7,14 @@
     <title>About - Amogk Patil</title>
     <link rel="stylesheet" href="style.css">
     <script src="nav.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.167.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.167.1/examples/jsm/"
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -42,32 +50,18 @@
             </div></a>
         </ul>
     </div>
-    <div>
-        <div id="blur"></div>
-        <div id="blob"></div>
-    </div>
     <div class="content">
         <h1 id="content-heading">Want to contact me?</h1>
-        <h2 id="content-subheading">Send a message here:</h2>
-        <form class="input-form" action="send-email.php" method="POST">
-            <input class="input-name" name="name" type="text" placeholder="Name" required>
-            <input class="input-name" name="email" type="email" placeholder="Email" required>
-            <input class="input-name" name="subject" type="text" placeholder="Subject" required>
-            <textarea id="input-message" name="message" type="text-area" placeholder="Message here" required></textarea>
-            <input id="send-message" type="submit" value="Send message"></input>
-        </form>
-    </div>
-    <!--<header>
-        <h1 id="title"><a href="index.html">amogk patil.</a></h1>
-    </header>
-    <div id="after-contact">
-        <h1 id="response">Thanks for sending me a message! I will respond as soon as I can.</h1>
-        <a href="index.html"><h1 id="return-home">Return home?</h1></a>
+        <h2 id="content-subheading">Find me on the below platforms:</h2>
+        <div id="links-holder">
+            <a id="contact-link" target="_blank" href="https://www.linkedin.com/in/amogk-patil-6b7a56321"><img src="images/linkedin.svg" alt="linkedin"></a>
+            <a id="contact-link" target="_blank" href="https://github.com/amogk"><img src="images/github.svg" alt="github"></a>
+        </div>
         <div id="contact_canvasholder">
             <canvas id="contact_c"></canvas>
             <script src="contactreturn_3js.js" type="module"></script>    
-        </div>
-    </div>-->
+        </div>  
+    </div>
     <footer>
         <h3>A website designed and coded by Amogk Patil.</h3>
     </footer>
