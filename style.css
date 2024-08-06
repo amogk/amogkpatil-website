@@ -404,6 +404,7 @@ footer h3 {
     width: 25vw;
     height: 25vw;
     border-radius: 15px;
+    padding: 1% 0;
 }
 
 .item_style_1 div {
@@ -538,6 +539,44 @@ footer h3 {
     grid-area: 3 / 1 / span 1 / span 2;
     object-fit: cover;
     object-position: 0 80%;
+}
+
+@media only screen and (max-width: 800px) {
+    #about-flex {
+        flex-direction: column;
+    }
+
+    #photo-grid {
+        align-self: center;
+        width: 75vw;
+        display: grid;
+        grid-template-columns: 37.5vw 37.5vw;
+        grid-template-rows: 37.5vw 37.5vw 37.5vw;
+        align-content: center;
+        padding: 2.5%;
+    }
+    
+    #photo-grid-item:first-child {
+        width: 37.5vw;
+        height: 75vw;
+        grid-area: 1 / 1 / span 1 / span 2;
+        object-fit: cover;
+    }
+    
+    #photo-grid-item:nth-child(2) {
+        width: 37.5vw;
+        height: 75vw;
+        grid-area: 1 / 2 / span 1 / span 2;
+        object-fit: cover;
+    }
+    
+    #photo-grid-item:nth-child(3) {
+        width: 75vw;
+        height: 37.5vw;
+        grid-area: 3 / 1 / span 1 / span 2;
+        object-fit: cover;
+        object-position: 0 80%;
+    }
 }
 
 #about-text {
