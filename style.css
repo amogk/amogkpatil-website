@@ -396,7 +396,7 @@ footer h3 {
     margin: 1% auto;
     border-radius: 15px;
     border: 3px solid var(--blue);
-    width: 90%;
+    width: 95%;
 }
 
 
@@ -409,9 +409,20 @@ footer h3 {
 
 .item_style_1 div {
     align-content: center;
-    width: 60vw;
 }
 
+.item_style_1 div p {
+    align-content: center;
+    line-height: 175%;
+    color: var(--accent);
+}
+
+.item_style_1 div h1{
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    border-bottom: 3px solid var(--light);
+}
 
 @media only screen and (max-width: 800px) {
     .item_style_1 {
@@ -426,27 +437,13 @@ footer h3 {
     
     .item_style_1 div {
         align-content: center;
-        width: 100%;
     }
 
     .item_style_1 div h1{
-        font-size: 2em;
+        font-size: 1.75em;
         word-wrap: break-word;
+        letter-spacing: .15em;
     }
-}
-
-
-.item_style_1 div p {
-    align-content: center;
-    line-height: 175%;
-    color: var(--accent);
-}
-
-.item_style_1 div h1{
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    border-bottom: 3px solid var(--light);
 }
 
 #projects_title {
@@ -477,6 +474,7 @@ footer h3 {
 
 #generic_seconday_desc {
     font-weight: 300;
+    line-height: 150%;
 }
 
 .generic_grid {
